@@ -10,7 +10,7 @@ I like the design and the project idea, so I decided to complete the task based 
 
 -   I used em instead of px in most cases to make elements scalable keeping accessibility in mind, so that users who need to zoom in, would be able to do so.
 
--   The mockups cover two screen sizes w=1920px and w=350px. More information is needed from designers on the layout for sizes between the two mentioned.
+-   The mockups cover two screen sizes w=1920px and w=350px. The app looks best in those sizes. More information is needed from designers on the layout for other sizes. I added the most popular screen sizes to `_mixins.scss` to be able to use them in the future.
 
 -   I tried to stick to the mockup, but for better accessibility labels are required for every selection in the modal.
 
