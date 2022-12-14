@@ -6,7 +6,9 @@ const WelcomePage = () => {
         <div className="welcome-page-container">
             <img src={logo} alt="Coffee & Co logo" className="logo-image" />
 
-            <img src={heroImage} alt="Coffee & Co" className="hero-image" />
+            <section className="hero-image">
+                <img src={heroImage} alt="Coffee & Co background" />
+            </section>
         </div>
     )
 }
