@@ -29,4 +29,4 @@ The port has been changed from the default one to 8080 by specifying it as an en
 The page will reload when you make changes.
 You may also see any lint errors in the console.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was built using Node.js v.17.9.0 and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
