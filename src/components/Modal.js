@@ -31,7 +31,7 @@ const Modal = () => {
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-label"
-            aria-describedby="modal-description"
+            aria-describedby=""
         >
             <div className="modal-content">
                 <div className="modal-header">
@@ -40,7 +40,7 @@ const Modal = () => {
                         alt="Coffee & Co logo"
                         className="mobile-logo"
                     />
-                    <h2 id="modal-description">
+                    <h2 id="modal-label">
                         Joining us for{' '}
                         <span className="first-colour">coffee</span> or{' '}
                         <span className="second-colour">
@@ -55,12 +55,13 @@ const Modal = () => {
                     </i>
 
                     <fieldset className="modal-form">
-                        <form className="form">
+                        <form className="form" onSubmit={validateAge}>
                             <select
                                 name="day"
                                 id="day"
                                 required
                                 defaultValue="Day"
+                                aria-label="Day"
                             >
                                 <option disabled value="Day">
                                     Day
@@ -78,6 +79,7 @@ const Modal = () => {
                                 id="month"
                                 required
                                 defaultValue="Month"
+                                aria-label="Month"
                             >
                                 <option disabled>Month</option>
                                 {Array(12)
@@ -88,12 +90,12 @@ const Modal = () => {
                                         </option>
                                     ))}
                             </select>
-
                             <select
                                 name="year"
                                 id="year"
                                 required
                                 defaultValue="Year"
+                                aria-label="Year"
                             >
                                 <option disabled>Year</option>
                                 {Array(123)
