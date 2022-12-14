@@ -1,5 +1,5 @@
 @use 'variables' as var;
-@use 'base';
+@use 'mixins';
 @use 'layout';
 @use 'components';
 // Override default variables before the import
@@ -7,3 +7,9 @@
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+
+.App {
+    font-family: var.$font-family;
+    height: 100vh;
+    width: 100vw;
+}
