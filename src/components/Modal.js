@@ -11,7 +11,7 @@ const Modal = () => {
         const year = document.getElementById('year').value
         const month = document.getElementById('month').value
         const day = document.getElementById('day').value
-        console.log(year, month, day)
+
         if (year >= 1900 && day >= 1 && month >= 1) {
             if (calculateAge(year, month, day)) {
                 setShowModal(false)
@@ -25,13 +25,36 @@ const Modal = () => {
                 'Please enter your date of birth to verify that you are 18 years of age or older'
             )
     }
+    const dayOptions = Array(31)
+        .fill()
+        .map((_, i) => (
+            <option key={i} value={i + 1}>
+                {i + 1}
+            </option>
+        ))
+    const monthOptions = Array(12)
+        .fill()
+        .map((_, i) => (
+            <option key={i} value={i + 1}>
+                {i + 1}
+            </option>
+        ))
+
+    const yearOptions = Array(123)
+        .fill()
+        .map((_, i) => (
+            <option key={i} value={2022 - i}>
+                {2022 - i}
+            </option>
+        ))
+
     return (
         <div
             className="modal-container"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-label"
-            aria-describedby=""
+            aria-describedby="modal-description"
         >
             <div className="modal-content">
                 <div className="modal-header">
@@ -66,13 +89,7 @@ const Modal = () => {
                                 <option disabled value="Day">
                                     Day
                                 </option>
-                                {Array(31)
-                                    .fill()
-                                    .map((_, i) => (
-                                        <option key={i} value={i + 1}>
-                                            {i + 1}
-                                        </option>
-                                    ))}
+                                {dayOptions}
                             </select>
                             <select
                                 name="month"
@@ -82,13 +99,7 @@ const Modal = () => {
                                 aria-label="Month"
                             >
                                 <option disabled>Month</option>
-                                {Array(12)
-                                    .fill()
-                                    .map((_, i) => (
-                                        <option key={i} value={i + 1}>
-                                            {i + 1}
-                                        </option>
-                                    ))}
+                                {monthOptions}
                             </select>
                             <select
                                 name="year"
@@ -98,13 +109,7 @@ const Modal = () => {
                                 aria-label="Year"
                             >
                                 <option disabled>Year</option>
-                                {Array(123)
-                                    .fill()
-                                    .map((_, i) => (
-                                        <option key={i} value={2022 - i}>
-                                            {2022 - i}
-                                        </option>
-                                    ))}
+                                {yearOptions}
                             </select>
                         </form>
                         <button
