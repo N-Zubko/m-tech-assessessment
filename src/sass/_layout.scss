@@ -1,11 +1,46 @@
 @use 'variables' as var;
+@import 'mixins';
 
 .welcome-page-container {
-    background: transparent url('../assets/desktop-background.png') 0% 0%
-        no-repeat padding-box;
+    background-image: url('../assets/desktop-background.png');
+    background-repeat: repeat;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 3em 5em;
     gap: 2em;
+
+    .logo-image {
+        width: 25%;
+    }
+    .hero-image {
+        img {
+            width: 40em;
+        }
+    }
+    @include r(480) {
+        padding: 0;
+        .logo-image {
+            display: none;
+        }
+
+        .hero-image {
+            img {
+                width: 100%;
+                max-height: 70%;
+            }
+        }
+    }
+    @include r(1500) {
+        padding: 5em 8em;
+        .hero-image {
+            img {
+                width: 75%;
+                content: url('../assets/desktop-image@2x.png');
+            }
+        }
+    }
 }
