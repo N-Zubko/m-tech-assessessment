@@ -27,7 +27,7 @@ const Modal = () => {
                     </p>
                 </div>
                 <fieldset className="modal-form">
-                    <form className="d-inline-flex">
+                    <form className="form">
                         <label for="day" className="dropdown-item"></label>
                         <select name="day" id="day">
                             <option disabled selected>
@@ -51,11 +51,11 @@ const Modal = () => {
                             </option>
                             <option value="1">1</option>
                         </select>
-                        <br />
-                        <button type="submit" className="btn btn-dark">
-                            Enter Site
-                        </button>
                     </form>
+                    <br />
+                    <button type="submit" className="btn btn-dark">
+                        Enter Site
+                    </button>
                 </fieldset>
             </div>
         </div>
